@@ -1,8 +1,9 @@
 import "./App.css";
-
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MemberCreate from "./pages/MemberCreate";
 import Navbar from "./components/Navbar";
+import Dashboard from "./layouts/Dashboard";
+
 function App() {
   return (
     <div className="App">
@@ -13,10 +14,7 @@ function App() {
             renders the first one that matches the current URL. */}
           <Routes>
             <Route path="/createmembers" element={<MemberCreate />} />
-
-            <Route path="/members" element={<div> members .... </div>} />
-
-            <Route path="/" element={<div> Home .... </div>} />
+            <Route path="/" element={<Dashboard />} />
           </Routes>
         </div>
       </Router>
